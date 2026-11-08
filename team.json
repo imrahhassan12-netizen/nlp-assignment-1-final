@@ -1,0 +1,17 @@
+{
+  "team_name": "Imrah Maqsood and Ajwa",
+  "repository_url": "https://github.com/imrahhassan12-netizen/NLP_Assignment_1",
+  "tag": "assignment-1",
+  "members": [
+    {
+      "name": "Imrah Maqsood",
+      "roll_number": "0293",
+      "contribution": "Dataset exploration, tokenization comparison, text preprocessing, implementation, testing and report preparation."
+    },
+    {
+      "name": "Ajwa",
+      "roll_number": "TODO",
+      "contribution": "Project development, dataset exploration, text preprocessing, testing and documentation."
+    }
+  ]
+}

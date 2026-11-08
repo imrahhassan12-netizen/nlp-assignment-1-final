@@ -1,0 +1,16 @@
+Tokenizer comparison on sample sentence 1:
+  Whitespace split         ['I', "couldn't", 'believe', 'it;', 'the', 'acting', 'was', 'top-notch,', 'but', 'the', 'plot', "isn't", 'great.<br', '/><br', '/>Rated', '7.5/10!']
+  Regex \b\w+\b            ['I', 'couldn', 't', 'believe', 'it', 'the', 'acting', 'was', 'top', 'notch', 'but', 'the', 'plot', 'isn', 't', 'great', 'br', 'br', 'Rated', '7', '5', '10']
+  NLTK (Treebank-style)    ['I', 'could', "n't", 'believe', 'it', ';', 'the', 'acting', 'was', 'top-notch', ',', 'but', 'the', 'plot', 'is', "n't", 'great.', '<', 'br', '/', '>', '<', 'br', '/', '>', 'Rated', '7.5/10', '!']
+  spaCy (English rules)    ['I', 'could', "n't", 'believe', 'it', ';', 'the', 'acting', 'was', 'top', '-', 'notch', ',', 'but', 'the', 'plot', 'is', "n't", 'great.<br', '/><br', '/>Rated', '7.5/10', '!']
+Corpus counts on 1000-review sample:
+  Whitespace split         tokens=233,773 types=32,528
+  Regex \b\w+\b            tokens=242,627 types=17,926
+  NLTK (Treebank-style)    tokens=274,973 types=22,438
+  spaCy (English rules)    tokens=272,809 types=20,009
+Regex pattern matches (reviews):
+  HTML tags              29,202
+  URLs                   195
+  Rating expressions     2,980
+  Repeated punctuation   12,662
+  Negation contractions  29,586

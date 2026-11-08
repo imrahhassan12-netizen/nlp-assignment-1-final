@@ -1,0 +1,15 @@
+Documents            : 50,000
+Average length       : 231.16 words (min 4, median 173, max 2,470)
+Target distribution  : {'positive': 25000, 'negative': 25000}
+Sample (1000 reviews): tokens=242,627, types=17,926, TTR=0.0739
+Hapax legomena       : 47.4% of types
+Top-100 words cover  : 52.6% of tokens
+Most frequent words  : the(13263), a(6593), and(6498), of(5732), to(5337), is(4217), br(4066), it(4054)
+Messy-text findings  :
+  HTML line-break tags   29,202 reviews (58.4%)
+  URLs                      195 reviews (0.39%)
+  ALL-CAPS emphasis      11,339 reviews (22.68%)
+  Repeated punctuation   12,662 reviews (25.32%)
+  Non-ASCII characters    4,660 reviews (9.32%)
+  Irregular spacing       3,986 reviews (7.97%)
+  Rating expressions      2,980 reviews (5.96%)

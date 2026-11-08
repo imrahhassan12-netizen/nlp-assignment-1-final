@@ -1,0 +1,8 @@
+Cleaning completed
+Rows in / out        : 50,000 / 50,000
+Vocabulary (raw)     : 130,065
+Vocabulary (lowercase raw): 101,944
+Vocabulary (cleaned) : 70,010
+Reduction vs raw     : 46.2%
+Stem examples        : watching->watch, watched->watch, movies->movi, acting->act, loved->love, loving->love, disappointing->disappoint, disappointed->disappoint, terrible->terribl, wonderfully->wonder
+Saved                : /home/claude/final/NLP_Assignment_1/data/processed/cleaned_reviews.csv

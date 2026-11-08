@@ -1,0 +1,486 @@
+{
+  "exploration": {
+    "n_documents": 50000,
+    "avg_words": 231.16,
+    "median_words": 173.0,
+    "min_words": 4,
+    "max_words": 2470,
+    "target_counts": {
+      "positive": 25000,
+      "negative": 25000
+    },
+    "target_pct": {
+      "positive": 50.0,
+      "negative": 50.0
+    },
+    "sample_size": 1000,
+    "sample_tokens": 242627,
+    "sample_types": 17926,
+    "sample_ttr": 0.0739,
+    "sample_hapax_pct": 47.4,
+    "sample_top100_pct": 52.6,
+    "top_words": [
+      [
+        "the",
+        13263
+      ],
+      [
+        "a",
+        6593
+      ],
+      [
+        "and",
+        6498
+      ],
+      [
+        "of",
+        5732
+      ],
+      [
+        "to",
+        5337
+      ],
+      [
+        "is",
+        4217
+      ],
+      [
+        "br",
+        4066
+      ],
+      [
+        "it",
+        4054
+      ],
+      [
+        "in",
+        3764
+      ],
+      [
+        "i",
+        3633
+      ],
+      [
+        "this",
+        3080
+      ],
+      [
+        "that",
+        2880
+      ]
+    ],
+    "messy_examples": [
+      {
+        "issue": "HTML line-break tags",
+        "reviews_affected": 29202,
+        "share_pct": 58.4,
+        "example": "ey are right, as this is exactly what happened with me.<br /><br />The first thing that struck me about Oz was its b"
+      },
+      {
+        "issue": "URLs",
+        "reviews_affected": 195,
+        "share_pct": 0.39,
+        "example": "'S GUIDE TO AN INCONVENIENT TRUTH\" can be found at is :www.cei.org. A shorter 10-page version can be found at: www.cei.org"
+      },
+      {
+        "issue": "ALL-CAPS emphasis",
+        "reviews_affected": 11339,
+        "share_pct": 22.68,
+        "example": "which totally ruins all the film! I expected to see a BOOGEYMAN similar movie, and instead i watched a drama with some"
+      },
+      {
+        "issue": "Repeated punctuation",
+        "reviews_affected": 12662,
+        "share_pct": 25.32,
+        "example": "gangstas, Latinos, Christians, Italians, Irish and more....so scuffles, death stares, dodgy dealings and shady agr"
+      },
+      {
+        "issue": "Non-ASCII characters",
+        "reviews_affected": 4660,
+        "share_pct": 9.32,
+        "example": "that has been done and redone so many times that clichéd dialogue, rehashed plot and over-the-top action seque"
+      },
+      {
+        "issue": "Irregular spacing",
+        "reviews_affected": 3986,
+        "share_pct": 7.97,
+        "example": "rise really that in the 1990s, a glut of 'Die Hard on a .....' movies cashed in on the wrong guy, wrong place, w"
+      },
+      {
+        "issue": "Rating expressions",
+        "reviews_affected": 2980,
+        "share_pct": 5.96,
+        "example": "ly hilarious at the same time, I'm giving this movie a 3/10, an improvement from the 0.5/10 I was originally going"
+      }
+    ],
+    "environment": {
+      "python": "3.12.3",
+      "pandas": "3.0.6",
+      "nltk": "3.10.4",
+      "spacy": "3.8.18"
+    }
+  },
+  "tokenization": {
+    "sentences": [
+      {
+        "sentence": "I couldn't believe it; the acting was top-notch, but the plot isn't great.<br /><br />Rated 7.5/10!",
+        "tokens": {
+          "Whitespace split": [
+            "I",
+            "couldn't",
+            "believe",
+            "it;",
+            "the",
+            "acting",
+            "was",
+            "top-notch,",
+            "but",
+            "the",
+            "plot",
+            "isn't",
+            "great.<br",
+            "/><br",
+            "/>Rated",
+            "7.5/10!"
+          ],
+          "Regex \\b\\w+\\b": [
+            "I",
+            "couldn",
+            "t",
+            "believe",
+            "it",
+            "the",
+            "acting",
+            "was",
+            "top",
+            "notch",
+            "but",
+            "the",
+            "plot",
+            "isn",
+            "t",
+            "great",
+            "br",
+            "br",
+            "Rated",
+            "7",
+            "5",
+            "10"
+          ],
+          "NLTK (Treebank-style)": [
+            "I",
+            "could",
+            "n't",
+            "believe",
+            "it",
+            ";",
+            "the",
+            "acting",
+            "was",
+            "top-notch",
+            ",",
+            "but",
+            "the",
+            "plot",
+            "is",
+            "n't",
+            "great.",
+            "<",
+            "br",
+            "/",
+            ">",
+            "<",
+            "br",
+            "/",
+            ">",
+            "Rated",
+            "7.5/10",
+            "!"
+          ],
+          "spaCy (English rules)": [
+            "I",
+            "could",
+            "n't",
+            "believe",
+            "it",
+            ";",
+            "the",
+            "acting",
+            "was",
+            "top",
+            "-",
+            "notch",
+            ",",
+            "but",
+            "the",
+            "plot",
+            "is",
+            "n't",
+            "great.<br",
+            "/><br",
+            "/>Rated",
+            "7.5/10",
+            "!"
+          ]
+        }
+      },
+      {
+        "sentence": "Check www.imdb.com for the cast's full list... they're amazing!!!",
+        "tokens": {
+          "Whitespace split": [
+            "Check",
+            "www.imdb.com",
+            "for",
+            "the",
+            "cast's",
+            "full",
+            "list...",
+            "they're",
+            "amazing!!!"
+          ],
+          "Regex \\b\\w+\\b": [
+            "Check",
+            "www",
+            "imdb",
+            "com",
+            "for",
+            "the",
+            "cast",
+            "s",
+            "full",
+            "list",
+            "they",
+            "re",
+            "amazing"
+          ],
+          "NLTK (Treebank-style)": [
+            "Check",
+            "www.imdb.com",
+            "for",
+            "the",
+            "cast",
+            "'s",
+            "full",
+            "list",
+            "...",
+            "they",
+            "'re",
+            "amazing",
+            "!",
+            "!",
+            "!"
+          ],
+          "spaCy (English rules)": [
+            "Check",
+            "www.imdb.com",
+            "for",
+            "the",
+            "cast",
+            "'s",
+            "full",
+            "list",
+            "...",
+            "they",
+            "'re",
+            "amazing",
+            "!",
+            "!",
+            "!"
+          ]
+        }
+      },
+      {
+        "sentence": "It's a feel-good movie (1994) that you'll love 😍",
+        "tokens": {
+          "Whitespace split": [
+            "It's",
+            "a",
+            "feel-good",
+            "movie",
+            "(1994)",
+            "that",
+            "you'll",
+            "love",
+            "😍"
+          ],
+          "Regex \\b\\w+\\b": [
+            "It",
+            "s",
+            "a",
+            "feel",
+            "good",
+            "movie",
+            "1994",
+            "that",
+            "you",
+            "ll",
+            "love"
+          ],
+          "NLTK (Treebank-style)": [
+            "It",
+            "'s",
+            "a",
+            "feel-good",
+            "movie",
+            "(",
+            "1994",
+            ")",
+            "that",
+            "you",
+            "'ll",
+            "love",
+            "😍"
+          ],
+          "spaCy (English rules)": [
+            "It",
+            "'s",
+            "a",
+            "feel",
+            "-",
+            "good",
+            "movie",
+            "(",
+            "1994",
+            ")",
+            "that",
+            "you",
+            "'ll",
+            "love",
+            "😍"
+          ]
+        }
+      }
+    ],
+    "corpus_counts": {
+      "Whitespace split": {
+        "tokens": 233773,
+        "types": 32528
+      },
+      "Regex \\b\\w+\\b": {
+        "tokens": 242627,
+        "types": 17926
+      },
+      "NLTK (Treebank-style)": {
+        "tokens": 274973,
+        "types": 22438
+      },
+      "spaCy (English rules)": {
+        "tokens": 272809,
+        "types": 20009
+      }
+    },
+    "regex_table": [
+      {
+        "name": "HTML tags",
+        "pattern": "<[^>]+>",
+        "explanation": "Matches '<', any run of characters that is not '>', then '>'. Finds <br /> line breaks so they can be deleted instead of becoming a 'br' token.",
+        "reviews_matching": 29202,
+        "example": "<br />"
+      },
+      {
+        "name": "URLs",
+        "pattern": "https?://\\S+|www\\.\\S+",
+        "explanation": "Matches http(s):// or www. followed by non-space characters. Web links carry no sentiment.",
+        "reviews_matching": 195,
+        "example": "www.cei.org."
+      },
+      {
+        "name": "Rating expressions",
+        "pattern": "\\b(\\d{1,2})(?:\\.\\d)?\\s*/\\s*10\\b",
+        "explanation": "Matches 1-2 digits, an optional decimal, optional spaces and '/10'. Keeps scores such as 7/10 as a single useful token (rating7).",
+        "reviews_matching": 2980,
+        "example": "3/10"
+      },
+      {
+        "name": "Repeated punctuation",
+        "pattern": "([!?.])\\1{2,}",
+        "explanation": "Matches a !, ? or . repeated 3+ times via a back-reference. Marks emphatic style.",
+        "reviews_matching": 12662,
+        "example": "...."
+      },
+      {
+        "name": "Negation contractions",
+        "pattern": "\\b\\w+n't\\b",
+        "explanation": "Matches word characters followed by n't. Locates words such as didn't and isn't whose negation must survive cleaning.",
+        "reviews_matching": 29586,
+        "example": "wouldn't"
+      }
+    ],
+    "challenge_review_counts": {
+      "Contractions (n't)": 29586,
+      "Hyphenated words": 26821,
+      "Non-ASCII / emoji characters": 4660,
+      "HTML tags": 29202,
+      "Email addresses": 48
+    }
+  },
+  "cleaning": {
+    "vocab_raw_case_sensitive": 130065,
+    "vocab_raw_lowercase": 101944,
+    "vocab_cleaned": 70010,
+    "reduction_vs_raw_pct": 46.2,
+    "reduction_vs_lowercase_pct": 31.3,
+    "rows_in": 50000,
+    "rows_out": 50000,
+    "rows_dropped_empty": 0,
+    "stopword_count": 187,
+    "kept_words": [
+      "against",
+      "but",
+      "few",
+      "more",
+      "most",
+      "never",
+      "no",
+      "nor",
+      "not",
+      "only",
+      "too",
+      "very"
+    ],
+    "stem_examples": [
+      [
+        "watching",
+        "watch"
+      ],
+      [
+        "watched",
+        "watch"
+      ],
+      [
+        "movies",
+        "movi"
+      ],
+      [
+        "acting",
+        "act"
+      ],
+      [
+        "loved",
+        "love"
+      ],
+      [
+        "loving",
+        "love"
+      ],
+      [
+        "disappointing",
+        "disappoint"
+      ],
+      [
+        "disappointed",
+        "disappoint"
+      ],
+      [
+        "terrible",
+        "terribl"
+      ],
+      [
+        "wonderfully",
+        "wonder"
+      ]
+    ],
+    "example_before": "One of the other reviewers has mentioned that after watching just 1 Oz episode you'll be hooked. They are right, as this is exactly what happened with me.<br /><br />The first thing that struck me about Oz was its brutality and unflinching scenes of violence, which set in right from the word GO. Trust me, this is not a show for the faint hearted or timid. This show pulls no punches with regards to",
+    "example_after": "one review mention watch 1 oz episod hook right exactli happen first thing struck oz brutal unflinch scene violenc set right word go trust not show faint heart timid show pull no punch regard drug sex violenc hardcor classic use word call oz nicknam given oswald maximum secur state penitentari focus mainli emerald citi experiment section prison cell glass front face inward privaci not high agenda "
+  }
+}
